@@ -50,11 +50,12 @@ main{
 
 .listas{
     padding-right: 30px;
+    display: flex;
 }
 
 .listas li{
     list-style-type: none;
-    display: inline-block;
+    
 }
 
 .listas li a{
