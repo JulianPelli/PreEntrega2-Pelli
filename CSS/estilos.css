@@ -192,16 +192,19 @@ footer{background-color: #254a33;
 
 .formulario input{
     display: block;
+    width: 300px;
+
 }
+
 
 .formulario textarea{
     display: block;
+    width: 300px;
 }
 
 .formulario label{
     font-style: satoritextos;
-    font-size: 2rem;
-    
+    font-size: 2.5rem;  
 }
 
 .wsp{
