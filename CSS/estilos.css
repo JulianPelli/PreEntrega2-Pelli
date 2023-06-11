@@ -42,7 +42,7 @@ header {
 }
 
 main {
-    margin-top: 10rem;
+    margin-top: 15rem;
 
 }
 
@@ -54,14 +54,10 @@ main {
 .listas {
     padding-right: 3rem;
     display: flex;
+    background-color: #254a33;
 }
 
-.listas li {
-    list-style-type: none;
-
-}
-
-.listas li a {
+.listas a {
     color: #ead8cc;
     text-decoration-line: none;
     padding: 0.5rem 1rem;
@@ -69,16 +65,14 @@ main {
     font-family: satorititulos;
 }
 
-.listas li a:hover {
+.listas a:hover {
     background-color: rgb(82, 82, 82);
 }
-
 
 footer {
     background-color: #254a33;
     border-top: 2px solid rgba(0, 0, 0, 0.24);
     width: 100%;
-    /* display: flex; */
     height: 23rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -217,13 +211,6 @@ footer {
     height: 4rem;
 }
 
-.arriba {
-    position: relative;
-    margin-left: 97.3%;
-    width: 4rem;
-    height: 4rem;
-}
-
 /* Segunda fila de grilla */
 
 .nosotrostexto {
@@ -321,7 +308,7 @@ footer {
 .contenedormain {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "banner banner"
         "nosimagen nos"
