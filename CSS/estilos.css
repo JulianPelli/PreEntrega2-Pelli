@@ -20,9 +20,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    background-color: #ead8cc;
-}
 
 /* Logo y navbar */
 header {
@@ -40,7 +37,7 @@ header {
 
 main {
     margin-top: 15rem;
-
+    background-color: #ead8cc;
 }
 
 .logoheader {
@@ -99,6 +96,7 @@ footer {
 .banner img {
     height: 70rem;
     width: 100%;
+    object-fit: cover;
 }
 
 .iconosuno {
@@ -234,7 +232,6 @@ footer {
 }
 
 .nosotrosimagen img {
-    margin-left: 55rem;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
@@ -254,7 +251,6 @@ footer {
 }
 
 .cartaimagen img {
-    margin-left: 20rem;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
@@ -274,7 +270,6 @@ footer {
 }
 
 .galeriaimagen img {
-    margin-left: 55rem;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
@@ -294,7 +289,6 @@ footer {
 }
 
 .contactoimagen img {
-    margin-left: 20rem;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
@@ -321,11 +315,11 @@ footer {
 /* Grid main */
 .contenedormain {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 2fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
     grid-template-areas:
         "banner banner"
-        "nosimagen nos"
+        "nosotrosimagen nosotrostexto"
         "linea1 linea1"
         "cartatexto cartaimagen"
         "linea2 linea2"
@@ -341,7 +335,7 @@ footer {
 
 
 .nosotrosimagen {
-    grid-area: nosimagen;
+    grid-area: nosotrosimagen;
 }
 
 .nosotrosimagen img {
@@ -353,7 +347,7 @@ footer {
 }
 
 .nosotrostexto {
-    grid-area: nos;
+    grid-area: nosotrostexto;
 }
 
 
@@ -449,20 +443,83 @@ footer {
 }
 
 
-@media (max-width: 500px){
-    .logoheader{
+@media (max-width: 550px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #logo {
+        order: 1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar {
+        order: 2;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-left: 0;
+        margin-right: auto;
+
+    }
+
+    .navbar-collapse {
+        order: 2;
+        width: 100%;
+        margin-top: 10px;
+
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .navbar-nav a {
+        margin-bottom: 10px;
+    }
+
+    .nosotrosimagen img,
+    .cartaimagen img,
+    .galeriaimagen img,
+    .contactoimagen img {
+        width: 50%;
+        height: auto;
+    }
+
+    .nosotrostexto,
+    .cartatexto,
+    .galeriatexto,
+    .contactotexto {
+        font-size: 1em;
+    }
+
+    .wsp{
         display: none;
     }
 
-   .iconosuno{
-    display: none;
-   }
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
 
-   .horarios{
-    display: none;
-   }
+    .footer h1,
+    .listahorarios,
+    .ubicacion {
+        display: none;
+    }
 
-   .ubicacion{
-    display: none;
-   }
+    .carousel-inner .carousel-item img {
+        width: 100%;
+        height: 70rem;
+        object-fit: cover;
+
 }
+
+
