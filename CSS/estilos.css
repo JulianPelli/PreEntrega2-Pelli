@@ -46,6 +46,19 @@ main {
     transition: transform 0.3s ease;
 }
 
+.container-fluid{
+    background-color: #254a33;
+}
+
+.navbar-toggler-icon{
+    width: 3rem;
+    height: 3rem;
+}
+
+.custom-toggler-icon{
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='10' height='10'><path stroke='rgba(0, 0, 1, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'></path></svg>");
+}
+
 .logoheader:hover {
     transform: scale(1.2);
 }
@@ -148,7 +161,7 @@ footer {
 
 .horarios h1 {
     padding-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: satorititulos;
     padding-left: 10px;
     padding-top: 10px;
@@ -173,7 +186,7 @@ footer {
 
 .ubicacion h1 {
     /* padding-bottom: 20%; */
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: satorititulos;
     padding-left: 10px;
     padding-top: 10px;
@@ -443,7 +456,8 @@ footer {
 }
 
 
-@media (max-width: 550px) {
+
+@media (max-width: 500px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -515,11 +529,19 @@ footer {
         display: none;
     }
 
-    .carousel-inner .carousel-item img {
+    .carousel-inner, 
+    .carousel-item img {
         width: 100%;
-        height: 70rem;
+        height: 30rem;
         object-fit: cover;
+    }
+    }
 
-}
 
-
+    @media (max-width: 768px) {
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;  
+            right: 0; 
+        }
+    }
