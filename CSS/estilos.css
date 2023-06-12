@@ -115,7 +115,7 @@ footer {
 
 .iconosuno h1 {
     padding-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: satorititulos;
     padding-left: 1rem;
     padding-top: 1rem;
@@ -132,7 +132,7 @@ footer {
 .redes p {
     padding-bottom: 1.5rem;
     padding-left: 1.5rem;
-
+    font-size: large;
 }
 
 .redes a {
@@ -218,21 +218,23 @@ footer {
 
 .wsp:hover {
     transform: scale(1.2);
-  }
+}
+
 /* Segunda fila de grilla */
 
 .nosotrostexto {
     font-family: satoritextos;
-    font-size: large;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 .nosotrostexto h1 {
     font-family: satorititulos;
+    font-size: 3rem;
 }
 
 .nosotrosimagen img {
-    margin-left: 30rem;
+    margin-left: 55rem;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
@@ -242,12 +244,13 @@ footer {
 
 .cartatexto {
     font-family: satoritextos;
-    font-size: large;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 .cartatexto h1 {
     font-family: satorititulos;
+    font-size: 3rem;
 }
 
 .cartaimagen img {
@@ -261,16 +264,17 @@ footer {
 
 .galeriatexto {
     font-family: satoritextos;
-    font-size: large;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 .galeriatexto h1 {
     font-family: satorititulos;
+    font-size: 3rem;
 }
 
 .galeriaimagen img {
-    margin-left: 20rem;
+    margin-left: 55rem;
     height: 25rem;
     width: 25rem;
     border-radius: 50%;
@@ -280,12 +284,13 @@ footer {
 
 .contactotexto {
     font-family: satoritextos;
-    font-size: large;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 .contactotexto h1 {
     font-family: satorititulos;
+    font-size: 3rem;
 }
 
 .contactoimagen img {
@@ -428,4 +433,36 @@ footer {
     padding: 0;
     width: 100%;
     grid-area: linea3;
+}
+
+/* grid galeria */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 500px){
+    .logoheader{
+        display: none;
+    }
+
+   .iconosuno{
+    display: none;
+   }
+
+   .horarios{
+    display: none;
+   }
+
+   .ubicacion{
+    display: none;
+   }
 }
