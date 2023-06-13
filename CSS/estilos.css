@@ -329,7 +329,7 @@ footer {
 }
 
 .bannercontacto h1 {
-    color:#ead8cc;
+    color: #ead8cc;
     font-family: satorititulos;
     font-size: 5rem;
     text-align: center;
@@ -477,6 +477,7 @@ footer {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    border: 2px solid black
 }
 
 .box-img img:hover {
@@ -491,6 +492,19 @@ footer {
     grid-row-start: span 2;
 }
 
+.carta {
+    display: flex;
+    justify-content: center;
+}
+
+.carta img {
+    display: inline-block;
+    border: 6px solid black ;
+}
+
+.fondocarta {
+    background-color:#000;
+}
 
 
 /* MEDIA QUERIES */
@@ -631,5 +645,23 @@ footer {
 
     .container-img .box-img:nth-child(1) {
         grid-column-start: span 1;
+    }
+}
+
+@media screen and (max-width: 1388px) {
+    .carta{
+        flex-direction: column;
+    }
+
+    .carta1{
+        order:2;
+    }
+
+    .carta2{
+        order:1;
+    }
+
+    .carta3{
+        order:3;
     }
 }
