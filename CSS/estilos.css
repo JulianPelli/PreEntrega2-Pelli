@@ -492,6 +492,8 @@ footer {
     grid-row-start: span 2;
 }
 
+/* Carta */
+
 .carta {
     display: flex;
     justify-content: center;
@@ -505,6 +507,59 @@ footer {
 .fondocarta {
     background-color:#000;
 }
+
+/* Grid nosotros */
+
+.container-nos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 350px 100px 250px;
+    grid-template-areas:
+    "fila1 fila1"
+    "fila2i fila2d"
+    "imginter imginter"
+    "fila4d fila4i";
+    align-items: center;
+    justify-items: center;
+}
+
+.fila1 {
+    grid-area: fila1;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+.fila2i {
+    grid-area: fila2i;
+    margin-top: 40px;
+}
+
+.fila2d { 
+    grid-area: fila2d;
+    margin-top: 40px;
+}
+
+.imginter {
+    grid-area: imginter;
+    border-top: 3px solid black;
+    height: 100px;
+    padding: 0;
+    width: 100%;
+}
+
+.fila4i{
+    grid-area: fila4i;
+    margin-bottom: 100px;
+}
+
+.fila4d {
+    grid-area: fila4d;
+    margin-bottom: 100px;
+}
+
+
+
+
 
 
 /* MEDIA QUERIES */
@@ -645,6 +700,14 @@ footer {
 
     .container-img .box-img:nth-child(1) {
         grid-column-start: span 1;
+    }
+
+    .fila2d{
+        font-size: 90%;
+    }
+
+    .fila4d {
+        font-size: 90%;
     }
 }
 
