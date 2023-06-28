@@ -1,10 +1,28 @@
+@import "variables";
+
+@mixin imagen-circular {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+@mixin texto-inicio{
+    font-family: satoritextos;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
 /* Reseteo */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 @font-face {
     font-family: satorititulos;
@@ -24,7 +42,7 @@ html {
 
 /* Logo y navbar */
 header {
-    background-color: #254a33;
+    background-color: $colorprincipal;
     border-bottom: 2px solid rgba(0, 0, 0, 0.24);
     height: 20rem;
     position: fixed;
@@ -38,7 +56,7 @@ header {
 
 main {
     margin-top: 15rem;
-    background-color: #ead8cc;
+    background-color: $colorsecundario;
 }
 
 .logoheader {
@@ -52,7 +70,7 @@ main {
 }
 
 .container-fluid {
-    background-color: #254a33;
+    background-color: $colorprincipal;
 }
 
 .navbar-toggler-icon {
@@ -68,10 +86,10 @@ main {
 .listas {
     padding-right: 3rem;
     display: flex;
-    background-color: #254a33;
+    background-color: $colorprincipal;
 
     a {
-        color: #ead8cc;
+        color: $colorsecundario;
         text-decoration-line: none;
         padding: 0.5rem 1rem;
         font-size: 4rem;
@@ -86,7 +104,7 @@ main {
 }
 
 footer {
-    background-color: #254a33;
+    background-color: $colorprincipal;
     border-top: 2px solid rgba(0, 0, 0, 0.24);
     width: 100%;
     height: 30rem;
@@ -127,7 +145,7 @@ footer {
 
 .redes {
     display: flex;
-    color: #ead8cc;
+    color: $colorsecundario;
     font-family: satoritextos;
     font-size: 1.5rem;
     align-items: center;
@@ -140,7 +158,7 @@ footer {
 
     a {
         text-decoration-line: none;
-        color: #ead8cc;
+        color: $colorsecundario;
     }
 
     img {
@@ -168,7 +186,7 @@ footer {
     ul {
         li {
             list-style-type: none;
-            color: #ead8cc;
+            color: $colorsecundario;
             font-family: satoritextos;
             font-size: 2rem;
             padding-bottom: 15px;
@@ -243,7 +261,7 @@ footer {
     order: 2;
 
     h1 {
-        color: #ead8cc;
+        color: $colorsecundario;
         font-family: satorititulos;
         font-size: 5rem;
         text-align: center;
@@ -274,22 +292,13 @@ footer {
     grid-area: nosotrosimagen;
 
     img {
-        height: 25rem;
-        width: 25rem;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.2);
-        }
+        @include imagen-circular;
     }
 }
 
 .nosotrostexto {
-    font-family: satoritextos;
-    font-size: 2.5rem;
-    text-align: center;
     grid-area: nosotrostexto;
+    @include texto-inicio;
 
     h1 {
         font-family: satorititulos;
@@ -299,9 +308,7 @@ footer {
 
 .cartatexto {
     grid-area: cartatexto;
-    font-family: satoritextos;
-    font-size: 2.5rem;
-    text-align: center;
+    @include texto-inicio;
 
     h1 {
         font-family: satorititulos;
@@ -313,22 +320,13 @@ footer {
     grid-area: cartaimagen;
 
     img {
-        height: 25rem;
-        width: 25rem;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.2);
-        }
+        @include imagen-circular;
     }
 }
 
 .galeriatexto {
     grid-area: galeriatexto;
-    font-family: satoritextos;
-    font-size: 2.5rem;
-    text-align: center;
+    @include texto-inicio;
 
     h1 {
         font-family: satorititulos;
@@ -340,22 +338,13 @@ footer {
     grid-area: galeriaimagen;
 
     img {
-        height: 25rem;
-        width: 25rem;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.2);
-        }
+        @include imagen-circular;
     }
 }
 
 .contactotexto {
     grid-area: contactotexto;
-    font-family: satoritextos;
-    font-size: 2.5rem;
-    text-align: center;
+    @include texto-inicio;
 
     h1 {
         font-family: satorititulos;
@@ -367,14 +356,7 @@ footer {
     grid-area: contactoimagen;
 
     img {
-        height: 25rem;
-        width: 25rem;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: scale(1.2);
-        }
+        @include imagen-circular;
     }
 }
 
@@ -386,16 +368,12 @@ footer {
 }
 
 .linea2 {
-    border-top: 2px solid rgb(0, 0, 0);
-    padding: 0;
-    width: 100%;
+    @extend .linea1;
     grid-area: linea2;
 }
 
 .linea3 {
-    border-top: 2px solid rgb(0, 0, 0);
-    padding: 0;
-    width: 100%;
+    @extend .linea1;
     grid-area: linea3;
 }
 
@@ -427,7 +405,7 @@ footer {
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
-        border: 2px solid black
+        border: 2px solid black;
     }
 
 }
