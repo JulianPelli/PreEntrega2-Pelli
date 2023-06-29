@@ -131,6 +131,7 @@ footer {
 .banner {
     grid-area: banner;
     justify-self: normal;
+    
 
     img {
         height: 70rem;
@@ -286,8 +287,9 @@ footer {
 .contenedormain {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 2fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
+    grid-template-rows: 18rem 2fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
     grid-template-areas:
+        "cafesp cafesp"
         "banner banner"
         "nosotrosimagen nosotrostexto"
         "linea1 linea1"
@@ -300,6 +302,26 @@ footer {
     justify-items: center;
 }
 
+.cafesp {
+    margin-top: 5rem;
+    grid-area: cafesp;
+    width: 100%;
+    height: 127px;
+    background-image: url(../Imagenes/Banner-Café.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+    order: 2;
+        h1 {
+            color: $colorsecundario;
+            font-family: satorititulos;
+            font-size: 5rem;
+            text-align: center;
+            padding-top: 3rem;
+            order: 1;
+        }
+}
 
 .nosotrosimagen {
     grid-area: nosotrosimagen;
@@ -313,7 +335,7 @@ footer {
     grid-area: nosotrostexto;
     @include texto-inicio;
 
-    h1 {
+    h2 {
         font-family: satorititulos;
         font-size: 3rem;
     }
@@ -323,7 +345,7 @@ footer {
     grid-area: cartatexto;
     @include texto-inicio;
 
-    h1 {
+    h2 {
         font-family: satorititulos;
         font-size: 3rem;
     }
@@ -341,7 +363,7 @@ footer {
     grid-area: galeriatexto;
     @include texto-inicio;
 
-    h1 {
+    h2 {
         font-family: satorititulos;
         font-size: 3rem;
     }
@@ -359,7 +381,7 @@ footer {
     grid-area: contactotexto;
     @include texto-inicio;
 
-    h1 {
+    h2 {
         font-family: satorititulos;
         font-size: 3rem;
     }
@@ -543,7 +565,6 @@ footer {
 
     }
 
-
     .container-img {
         width: 95%;
         grid-template-columns: repeat(2, 1fr);
@@ -590,6 +611,10 @@ footer {
             "linea3"
             "contactoimagen"
             "contactotexto";
+    }
+
+    .cafesp {
+        display: none;
     }
 
     .container-nos {

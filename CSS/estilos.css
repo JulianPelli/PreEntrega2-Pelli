@@ -242,10 +242,31 @@ footer {
 .contenedormain {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 2fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
-  grid-template-areas: "banner banner" "nosotrosimagen nosotrostexto" "linea1 linea1" "cartatexto cartaimagen" "linea2 linea2" "galeriaimagen galeriatexto" "linea3 linea3" "contactotexto contactoimagen";
+  grid-template-rows: 18rem 2fr 1fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
+  grid-template-areas: "cafesp cafesp" "banner banner" "nosotrosimagen nosotrostexto" "linea1 linea1" "cartatexto cartaimagen" "linea2 linea2" "galeriaimagen galeriatexto" "linea3 linea3" "contactotexto contactoimagen";
   align-items: center;
   justify-items: center;
+}
+
+.cafesp {
+  margin-top: 5rem;
+  grid-area: cafesp;
+  width: 100%;
+  height: 127px;
+  background-image: url(../Imagenes/Banner-Café.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  order: 2;
+}
+.cafesp h1 {
+  color: #ead8cc;
+  font-family: satorititulos;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 3rem;
+  order: 1;
 }
 
 .nosotrosimagen {
@@ -267,7 +288,7 @@ footer {
   font-size: 2.5rem;
   text-align: center;
 }
-.nosotrostexto h1 {
+.nosotrostexto h2 {
   font-family: satorititulos;
   font-size: 3rem;
 }
@@ -278,7 +299,7 @@ footer {
   font-size: 2.5rem;
   text-align: center;
 }
-.cartatexto h1 {
+.cartatexto h2 {
   font-family: satorititulos;
   font-size: 3rem;
 }
@@ -302,7 +323,7 @@ footer {
   font-size: 2.5rem;
   text-align: center;
 }
-.galeriatexto h1 {
+.galeriatexto h2 {
   font-family: satorititulos;
   font-size: 3rem;
 }
@@ -326,7 +347,7 @@ footer {
   font-size: 2.5rem;
   text-align: center;
 }
-.contactotexto h1 {
+.contactotexto h2 {
   font-family: satorititulos;
   font-size: 3rem;
 }
@@ -513,6 +534,9 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: auto 15rem auto 3rem auto auto 3rem auto auto 3rem auto auto;
     grid-template-areas: "banner" "nosotrosimagen" "nosotrostexto" "linea1" "cartaimagen" "cartatexto" "linea2" "galeriaimagen" "galeriatexto" "linea3" "contactoimagen" "contactotexto";
+  }
+  .cafesp {
+    display: none;
   }
   .container-nos {
     display: grid;
