@@ -11,7 +11,7 @@
     }
 }
 
-@mixin texto-inicio{
+@mixin texto-inicio {
     font-family: satoritextos;
     font-size: 2.5rem;
     text-align: center;
@@ -59,7 +59,23 @@ main {
     background-color: $colorsecundario;
 }
 
+@keyframes logo-entrada {
+    0% {
+        top: -250px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
 .logoheader {
+    position: relative;
+    top: -100px;
+    opacity: 0;
+    animation: logo-entrada 2s ease forwards;
     width: 30rem;
     padding-left: 3rem;
     transition: transform 0.3s ease;
@@ -241,12 +257,8 @@ footer {
     bottom: 32%;
     padding-right: 1rem;
     height: 5rem;
-    transition: transform 0.3s ease;
+    transition: transform 5s ease;
     z-index: 9;
-
-    &:hover {
-        transform: scale(1.2);
-    }
 }
 
 .bannercontacto {
@@ -287,6 +299,7 @@ footer {
     align-items: center;
     justify-items: center;
 }
+
 
 .nosotrosimagen {
     grid-area: nosotrosimagen;
@@ -560,6 +573,40 @@ footer {
 
 
 @media screen and (max-width: 500px) {
+
+    .contenedormain {
+        grid-template-columns: 100%;
+        grid-template-rows: auto 15rem auto 3rem auto auto 3rem auto auto 3rem auto auto;
+        grid-template-areas:
+            "banner"
+            "nosotrosimagen"
+            "nosotrostexto"
+            "linea1"
+            "cartaimagen"
+            "cartatexto"
+            "linea2"
+            "galeriaimagen"
+            "galeriatexto"
+            "linea3"
+            "contactoimagen"
+            "contactotexto";
+    }
+
+    .container-nos {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10rem 20rem auto auto 10rem auto;
+        grid-template-areas:
+            "fila1"
+            "fila2i"
+            "fila2d"
+            "imginter"
+            "fila4i"
+            "fila4d";
+        align-items: center;
+        justify-items: center;
+    }
+
     .header {
         display: flex;
         flex-direction: column;
@@ -609,7 +656,7 @@ footer {
         img {
             width: 12.5rem;
             height: 12.5rem;
-            margin-left: 5rem;
+            margin-left: 1rem;
         }
 
     }
@@ -645,7 +692,6 @@ footer {
             width: 4rem;
             height: auto;
         }
-
     }
 
     .container-img {
@@ -663,4 +709,9 @@ footer {
         grid-column-start: span 2;
     }
 
+    .iconosuno {
+        h1 {
+            display: none;
+        }
+    }
 }
