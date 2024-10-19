@@ -1,277 +1,629 @@
-
+@charset "UTF-8";
+/* Variables */
 /* Reseteo */
-*{margin: 0;
-padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Agregado de fuente */
 @font-face {
-    font-family: Satorititulos;
-    src: url(../Fuentes/04435_BerlinSansFB.ttf);
+  font-family: satorititulos;
+  src: url(../Fuentes/04435_BerlinSansFB.ttf);
 }
-
-/* Agregado de fuente */
 @font-face {
-    font-family: Satoritextos;
-    src: url(../Fuentes/BentonSans\ Regular.otf);
+  font-family: satoritextos;
+  src: url(../Fuentes/BentonSans\ Regular.otf);
 }
-
 html {
-    font-size: 62.5%;
-    }
-
-body{
-    background-color: #ead8cc;
+  font-size: 62.5%;
 }
 
 /* Logo y navbar */
-header{
-    background-color: #254a33;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.24);
-    height: 150px;
-    position: fixed;
+header {
+  background-color: #254a33;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+  height: 20rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  margin-top: 15rem;
+  background-color: #ead8cc;
+}
+
+@keyframes logo-entrada {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+  100% {
     top: 0;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    opacity: 1;
+  }
+}
+.logoheader {
+  position: relative;
+  top: -100px;
+  opacity: 0;
+  animation: logo-entrada 2s ease forwards;
+  width: 30rem;
+  padding-left: 3rem;
+  transition: transform 0.3s ease;
+}
+.logoheader:hover {
+  transform: scale(1.2);
 }
 
-main{
-    margin-top: 150px;
-    display: flex;
-    flex-direction: column;
+.container-fluid {
+  background-color: #254a33;
 }
 
-.logoheader{width: 200px;
-    padding-left: 30px;
-    }
-
-.listas{
-    padding-right: 30px;
+.navbar-toggler-icon {
+  width: 3rem;
+  height: 3rem;
 }
 
-.listas li{
-    list-style-type: none;
-    display: inline-block;
+.custom-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='10' height='10'><path stroke='rgba(0, 0, 1, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'></path></svg>");
 }
 
-.listas li a{
-    color: #ead8cc;
-    text-decoration-line: none;
-    padding: 5px 10px;
-    font-size: 3.5rem;
-    font-family: SatoriTitulos;
+.listas {
+  padding-right: 3rem;
+  display: flex;
+  background-color: #254a33;
+}
+.listas a {
+  color: #ead8cc;
+  text-decoration-line: none;
+  padding: 0.5rem 1rem;
+  font-size: 4rem;
+  font-family: satorititulos;
+  transition: transform 0.3s ease;
+}
+.listas a:hover {
+  transform: scale(1.2);
+  color: black;
 }
 
-.listas li a:hover{
-    background-color: rgb(82, 82, 82);}
-
-.linea {
-    /* transform:rotate(15deg); */
-    border-top: 2px solid black;
-    height: 100px;
-    margin: 100px auto 0 auto;
-    padding: 0;
-    width: 100%;
+footer {
+  background-color: #254a33;
+  border-top: 2px solid rgba(0, 0, 0, 0.24);
+  width: 100%;
+  height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.linea2 {
-   /*  transform:rotate(-15deg); */
-    border-top: 2px solid rgb(0, 0, 0);
-    height: 100px;
-    padding: 0;
-    margin: 100px auto 0 auto;
-    width: 100%;
+.banner {
+  grid-area: banner;
+  justify-self: normal;
 }
-
-footer{background-color: #254a33;
-    border-top: 2px solid rgba(0, 0, 0, 0.24);
-    width: 100%;
-    display: flex;
-    height: 23rem;
-}
-
-#banner img{
-    height: 70rem;
-    width: 100%;
+.banner img {
+  height: 70rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .iconosuno {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  justify-content: center;
+}
+.iconosuno img {
+  height: 3rem;
+  padding-bottom: 1.5rem;
+}
+.iconosuno h3 {
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  font-family: satorititulos;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.redes {
+  display: flex;
+  color: #ead8cc;
+  font-family: satoritextos;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.redes p {
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 3rem;
+}
+.redes a {
+  text-decoration-line: none;
+  color: #ead8cc;
+}
+.redes img {
+  width: 5.5rem;
+  height: auto;
+}
+
+.horarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.horarios h3 {
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  font-family: satorititulos;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.listahorarios ul li {
+  list-style-type: none;
+  color: #ead8cc;
+  font-family: satoritextos;
+  font-size: 2rem;
+  padding-bottom: 15px;
+  padding-left: 70px;
+}
+
+.ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ubicacion h3 {
+  font-size: 4rem;
+  font-family: satorititulos;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+}
+.formulario input {
+  display: block;
+  width: 300px;
+  padding: 5px;
+}
+.formulario textarea {
+  display: block;
+  width: 300px;
+  margin-bottom: 15px;
+}
+.formulario label {
+  font-style: satoritextos;
+  font-size: 3rem;
+}
+
+.wsp {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 50%;
+  padding-right: 1rem;
+  height: 5rem;
+  transition: transform 5s ease;
+  z-index: 9;
+}
+
+.bannercontacto {
+  margin-top: 20rem;
+  width: 100%;
+  height: 100px;
+  background-image: url(../Imagenes/Banner-Café.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  order: 2;
+}
+.bannercontacto h1 {
+  color: #ead8cc;
+  font-family: satorititulos;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  order: 1;
+}
+
+/* Grid main */
+.contenedormain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 2fr 10rem 1.2fr 0.1fr 1fr 0.1fr 1fr 0.1fr 1fr;
+  grid-template-areas: "banner banner" "cafesp cafesp" "nosotrosimagen nosotrostexto" "linea1 linea1" "cartatexto cartaimagen" "linea2 linea2" "galeriaimagen galeriatexto" "linea3 linea3" "contactotexto contactoimagen";
+  align-items: center;
+  justify-items: center;
+}
+
+.cafesp {
+  margin-top: 5rem;
+  grid-area: cafesp;
+  width: 100%;
+  height: 127px;
+  background-image: url(../Imagenes/Banner-Café.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  order: 2;
+}
+.cafesp h1 {
+  color: #ead8cc;
+  font-family: satorititulos;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 3rem;
+  order: 1;
+}
+
+.nosotrosimagen {
+  grid-area: nosotrosimagen;
+}
+.nosotrosimagen img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.nosotrosimagen img:hover {
+  transform: scale(1.2);
+}
+
+.nosotrostexto {
+  grid-area: nosotrostexto;
+  font-family: satoritextos;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.nosotrostexto h2 {
+  font-family: satorititulos;
+  font-size: 3rem;
+}
+
+.cartatexto {
+  grid-area: cartatexto;
+  font-family: satoritextos;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.cartatexto h2 {
+  font-family: satorititulos;
+  font-size: 3rem;
+}
+
+.cartaimagen {
+  grid-area: cartaimagen;
+}
+.cartaimagen img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.cartaimagen img:hover {
+  transform: scale(1.2);
+}
+
+.galeriatexto {
+  grid-area: galeriatexto;
+  font-family: satoritextos;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.galeriatexto h2 {
+  font-family: satorititulos;
+  font-size: 3rem;
+}
+
+.galeriaimagen {
+  grid-area: galeriaimagen;
+}
+.galeriaimagen img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.galeriaimagen img:hover {
+  transform: scale(1.2);
+}
+
+.contactotexto {
+  grid-area: contactotexto;
+  font-family: satoritextos;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.contactotexto h2 {
+  font-family: satorititulos;
+  font-size: 3rem;
+}
+
+.contactoimagen {
+  grid-area: contactoimagen;
+}
+.contactoimagen img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.contactoimagen img:hover {
+  transform: scale(1.2);
+}
+
+.linea1, .linea3, .linea2 {
+  border-top: 2px solid rgb(0, 0, 0);
+  padding: 0;
+  width: 100%;
+  grid-area: linea1;
+}
+
+.linea2 {
+  grid-area: linea2;
+}
+
+.linea3 {
+  grid-area: linea3;
+}
+
+/* grid galeria */
+.container-img {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 15px;
+}
+
+.container-img .box-img figure {
+  width: 100%;
+  height: 100%;
+}
+
+.container-img .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 2px solid black;
+}
+
+.box-img img:hover {
+  transform: scale(1.1);
+}
+
+.container-img .box-img:nth-child(1) {
+  grid-column-start: span 2;
+}
+
+.container-img .box-img:nth-child(4) {
+  grid-row-start: span 2;
+}
+
+/* Carta */
+.carta {
+  display: flex;
+  justify-content: center;
+}
+.carta img {
+  border: 6px solid black;
+}
+
+.fondocarta {
+  background-color: #000;
+}
+
+/* Grid nosotros */
+.container-nos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 350px 100px 250px;
+  grid-template-areas: "fila1 fila1" "fila2i fila2d" "imginter imginter" "fila4d fila4i";
+  align-items: center;
+  justify-items: center;
+}
+
+.fila1 {
+  grid-area: fila1;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+.fila2i {
+  grid-area: fila2i;
+  margin-top: 40px;
+}
+
+.fila2d {
+  grid-area: fila2d;
+  margin-top: 40px;
+}
+
+.imginter {
+  grid-area: imginter;
+  border-top: 3px solid black;
+  height: 100px;
+  padding: 0;
+  width: 100%;
+}
+
+.fila4i {
+  grid-area: fila4i;
+  margin-bottom: 100px;
+}
+
+.fila4d {
+  grid-area: fila4d;
+  margin-bottom: 100px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1388px) {
+  .carta {
     flex-direction: column;
-    padding-left: 2rem;
-    justify-content: center;
+  }
+  .carta1 {
+    order: 2;
+  }
+  .carta2 {
+    order: 1;
+  }
+  .carta3 {
+    order: 3;
+  }
 }
-
-.iconosuno img{
-    height: 3rem;
-    padding-bottom:15px;
-}
-
-.iconosuno h6 {
-    padding-bottom: 20%;
-    font-size: 3rem;
-    font-family: satorititulos;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.redes{
-    display: flex;
-    color: #ead8cc;
-    font-family: satoritextos;
-    font-size: 1.5rem;
-    align-items: center;
-}
-
-.redes p{
-    padding-bottom: 15px;
-    padding-left: 15px;
-    
-}
-
-.redes a{
-    text-decoration-line: none;
-    color: #ead8cc;
-}
-
-.horarios{
-    display: flex;
-    flex-direction: column;
-    padding-left: 30%;
-    justify-content: center;
-    align-items: center;
-}
-
-.horarios h6{
-    padding-bottom: 20%;
-    font-size: 3rem;
-    font-family: satorititulos;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.listahorarios ul li{
-    list-style-type: none;
-    color: #ead8cc;
-    font-family: satoritextos;
-    font-size: 1.5rem;
-    padding-bottom: 15px;
-    padding-left: 70px;
-}
-
-.ubicacion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 55rem;
-}
-
-.ubicacion h6{
-    padding-bottom: 20%;
-    font-size: 3rem;
-    font-family: satorititulos;
-    padding-left: 10px;
-    padding-top: 10px;
-}
-
-.mapa{
-    padding-left: 25px;
-}
-
-.formulario{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10%;
-}
-
-.formulario input{
-    display: block;
-}
-
-.formulario textarea{
-    display: block;
-}
-
-.formulario label{
-    font-style: satoritextos;
-    font-size: 2rem;
-    
-}
-
-.wsp{
-    display: flex;
-    position: fixed;
+@media screen and (max-width: 990px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
     right: 0;
-    bottom:32%;
-    padding-right: 1rem;
-    height: 4rem;
+  }
 }
-
-.arriba{
-    position: relative;
-    margin-left: 97.3%;
+@media screen and (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    height: 100rem;
+    justify-items: center;
+  }
+  .redes img {
+    width: 5rem;
+    height: auto;
+  }
+  .container-img {
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template-rows: 200px;
+  }
+  .container-img .box-img:nth-child(1) {
+    grid-column-start: span 1;
+  }
+  .fila2d {
+    font-size: 1.5rem;
+  }
+  .fila4d {
+    font-size: 1.5rem;
+  }
+  .nosotrostexto,
+  .cartatexto,
+  .galeriatexto,
+  .contactotexto {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contenedormain {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 15rem auto 3rem auto auto 3rem auto auto 3rem auto auto;
+    grid-template-areas: "banner" "nosotrosimagen" "nosotrostexto" "linea1" "cartaimagen" "cartatexto" "linea2" "galeriaimagen" "galeriatexto" "linea3" "contactoimagen" "contactotexto";
+  }
+  .cafesp {
+    display: none;
+  }
+  .container-nos {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10rem 20rem auto auto 10rem auto;
+    grid-template-areas: "fila1" "fila2i" "fila2d" "imginter" "fila4i" "fila4d";
+    align-items: center;
+    justify-items: center;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #logo {
+    order: 1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logoheader {
+    width: 25rem;
+    padding-top: 3rem;
+  }
+  .navbar {
+    order: 2;
+    width: 100%;
+  }
+  .navbar-toggler {
+    order: 2;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .navbar-collapse {
+    order: 2;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-nav a {
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  .nosotrosimagen img,
+  .contactoimagen img,
+  .cartaimagen img,
+  .galeriaimagen img {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-left: 1rem;
+  }
+  .nosotrostexto,
+  .cartatexto,
+  .galeriatexto,
+  .contactotexto {
+    font-size: 1.7rem;
+  }
+  .footer {
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-inner img,
+  .carousel-item img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+  }
+  .redes img {
     width: 4rem;
-    height: 4rem;
+    height: auto;
+  }
+  .container-img {
+    width: 90%;
+  }
+  .container-img .box-img img {
+    height: 200px;
+  }
+  .container-img .box-img:nth-child(5) {
+    grid-column-start: span 2;
+  }
+  .iconosuno h1 {
+    display: none;
+  }
 }
 
-
-.nos div{
-    display: inline-block;
-}
-
-.hp{
-    margin-left: 25%;
-    margin-top: 20rem;
-    font-family: Satoritextos;
-    font-size: large;
-    text-align: center;
-}
-
-.i img{
-    margin-left: 20rem;
-    height: 25rem;
-    width: 25rem;
-    border-radius: 50%;
-}
-
-.i2 img{
-    margin-left: 60rem;
-    height: 25rem;
-    width: 25rem;
-    border-radius: 50%;
-}
-
-.hp2{
-    margin-left: 25rem;
-    font-family: Satoritextos;
-    font-size: large;
-    text-align: center;
-}
-
-.hp h1{
-    font-family: satorititulos;
-}
-
-.hp2 h1{
-    font-family: satorititulos
-}
-
-#bannercontacto{
-    width: 100%;           
-    height: 100px;          
-    background: rgb(0, 0, 0);        
-    border: 1px solid #000;
-}
-
-#bannercontacto h1{
-    color:#ead8cc;
-    font-family: satorititulos;
-    font-size: 5rem;
-    text-align:center;
-    padding-top: 1.5rem;
-}
+/*# sourceMappingURL=estilos.css.map */

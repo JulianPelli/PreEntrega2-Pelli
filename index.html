@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- favicon es el icono que aparece en la pestaña (link rel) -->
+    <title>Satori</title>
+    <link rel="icon" href="./Imagenes/Logotipo tipográfico blanco.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -15,99 +15,129 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+
+    <meta name="description" content="En satori te ofrecemos el mejor cafe de especialidad de Buenos Aires.">
+    <meta name="keywords" content="Satori, Cafe, Especialidad, Urquiza, Pastelería, Desayuno, Merienda, Brunch">
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <a href="index.html"><img class="logoheader" src="Imagenes/Logotipo tipográfico nude.png"></a>
+    <header class="header">
+        <div id="logo" class="in">
+            <a href="index.html"><img class="logoheader" src="Imagenes/Logotipo tipográfico nude.png" alt="Logo"></a>
         </div>
 
-        <nav id="menu">
-            <ul class=listas>
-                <li><a href="#logo">Inicio</a></li>
-                <li><a href="Paginas/Nosotros.html">Nosotros</a></li>
-                <li><a href="Paginas/Carta.html">Carta</a></li>
-                <li><a href="Paginas/TiendaOnline.html">Tienda Online</a></li>
-                <li><a href="Paginas/contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon icono custom-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav listas">
+                        <li><a href="#logo">Inicio</a></li>
+                        <li><a href="Paginas/Nosotros.html">Nosotros</a></li>
+                        <li><a href="Paginas/Carta.html">Carta</a></li>
+                        <li><a href="Paginas/Galeria.html">Galería</a></li>
+                        <li><a href="Paginas/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <div id="banner">
-            <img src="Imagenes/Coffee Cup Background Banner.png" alt="banner">
+    <main class="contenedormain">
+        <div class="cafesp">
+            <h1>Café de especialidad</h1>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide banner">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Imagenes/galeria8.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Imagenes/galeria18.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="Imagenes/galeria10.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <div class="nos">
-            <div class="hp">
-                <h1>¿Quienes somos?</h1>
-                <p>Te invitamos a que conozcas nuestro emprendimiento y</p>
-                <p>de que se trata. Ingresa a nuestro apartado para conocer</p>
-                <p>mas de nosotros.</p>
-            </div>
-            <div class="i">
-                <a href="Paginas/Nosotros.html"><img src="Imagenes/Satori.png" alt="imagen"></a>
-            </div>
+        <div class="nosotrostexto">
+            <h2>¿Quienes somos?</h2>
+            <p>Te invitamos a que conozcas nuestro emprendimiento y</p>
+            <p>de que se trata. Ingresa a nuestro apartado para conocer</p>
+            <p>mas de nosotros.</p>
+        </div>
+        <div class="nosotrosimagen">
+            <a href="Paginas/Nosotros.html"><img src="Imagenes/Satori.png" alt="Nosotros"></a>
+        </div>
+
+        <div class="linea1"></div>
+
+        <div class="cartaimagen">
+            <a href="Paginas/Carta.html"><img src="Imagenes/Satoricarta.png" alt="Carta"></a>
+        </div>
+        <div class="cartatexto">
+            <h2>Nuestra carta</h2>
+            <p>Ofrecemos una amplia variedad de</p>
+            <p>productos para que puedas deleitarte</p>
+            <p>durante un desayuno o merienda.</p>
         </div>
 
         <div class="linea2"></div>
 
-        <div class="nos">
-            <div class="i2">
-                <a href="Paginas/Carta.html"><img src="Imagenes/Satoricarta.png" alt="imagen"></a>
-            </div>
-            <div class="hp2">
-                <h1>Nuestra carta</h1>
-                <p>Ofrecemos una amplia variedad de</p>
-                <p>productos para que puedas deleitarte</p>
-                <p>durante un desayuno o merienda.</p>
-            </div>
+        <div class="galeriatexto">
+            <h2>Galería</h2>
+            <p>Ingresa para conocer nuestro</p>
+            <p>local y todo lo que ofrecemos</p>
+            <p>a diario.</p>
+        </div>
+        <div class="galeriaimagen">
+            <a href="Paginas/Galeria.html"><img src="Imagenes/tiendasatori.png" alt="Galeria"></a>
         </div>
 
-        <div class="linea"></div>
+        <div class="linea3"></div>
 
-        <div class="nos">
-            <div class="hp">
-                <h1>Hace tu compra Online</h1>
-                <p>Visita nuestra tienda Online y </p>
-                <p>proba nuestros productos desde</p>
-                <p>la comodidad de tu casa.</p>
-            </div>
-
-            <div class="i">
-                <a href="Paginas/TiendaOnline.html"><img src="Imagenes/tiendasatori.png" alt="imagen"></a>
-            </div>
+        <div class="contactoimagen">
+            <a href="Paginas/contacto.html"><img src="Imagenes/Satoricontacto.png" alt="Contacto"></a>
+        </div>
+        <div class="contactotexto">
+            <h2>Contacte con nosotros</h2>
+            <p>Si tenes dudas, sugerencias o</p>
+            <p>queres trabajar con nosotros, no</p>
+            <p>dudes en contactarte con nuestro equipo.</p>
         </div>
 
-        <div class="linea2"></div>
-
-        <section>
-            <div class="nos">
-                <div class="i2">
-                    <a href="Paginas/contacto.html"><img src="Imagenes/Satoricontacto.png" alt="imagen"></a>
-                </div>
-                <div class="hp2">
-                    <h1>Contacte con nosotros</h1>
-                    <p>Si tenes dudas, sugerencias o</p>
-                    <p>queres trabajar con nosotros, no</p>
-                    <p>dudes en contactarte con nuestro equipo.</p>
-                </div>
-            </div>
-        </section>
         <div>
             <img class="wsp" src="Imagenes/whatsapp.png" alt="whatsapp">
         </div>
-        <div>
-            <a href="#banner"><img class="arriba" src="Imagenes/punta-de-flecha-hacia-arriba.png" alt="Arriba"></a>
-        </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="iconosuno">
-            <h6>
+            <h3>
                 Seguinos
-            </h6>
+            </h3>
             <div class="redes">
                 <img src="Imagenes/instagram.png" alt="Instagram">
                 <a href="www.instagram.com">
@@ -129,7 +159,7 @@
         </div>
 
         <div class="horarios">
-            <h6>Horarios</h6>
+            <h3>Horarios</h3>
             <div class="listahorarios">
                 <ul>
                     <li>Lunes a Viernes: 9 a 20hs</li>
@@ -140,15 +170,16 @@
         </div>
 
         <div class="ubicacion">
-            <h6>ubicacion</h6>
-            <div class="mapa">
-                <iframe
+            <h3>Ubicacion</h3>
+            <div>
+                <iframe class="mapa"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.040571533772!2d-58.47964792344449!3d-34.577839956133424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb73d54c0062f%3A0x47e7bfb44e1ad583!2sSatori%20Caf%C3%A9%20de%20especialidad!5e0!3m2!1ses-419!2sar!4v1684123767274!5m2!1ses-419!2sar"
                     width="200" height="100" style="border:1;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
